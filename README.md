@@ -11,6 +11,7 @@
 
 ```bash
 npm install
+npm init -y (pour initialiser node modules)
 npm start
 ```
 
@@ -60,7 +61,9 @@ Un bouton light/dark dans la barre d'outils permet de basculer instantanément l
 * **Solution apportée** : Suppression du `confirm()` du navigateur et remplacement par une boîte de dialogue native du système (`dialog.showMessageBox`) exécutée depuis le script principal (`main.js`). La vérification est maintenant asynchrone et transit par l'IPC (`ipcMain.handle` / `ipcRenderer.invoke`), ce qui a totalement réglé le problème de fluidité et de clavier bloqué.
 
 
-### Remarques
+--- 
+
+## Remarques
 
 Se projet m'a permis de mieux comprendre le fonctionnement d'Electron et de ses différentes fonctionnalités.
 J'ai pu découvrir l'architecture multi-processus d'Electron et l'importance de l'IPC pour la communication entre les processus.

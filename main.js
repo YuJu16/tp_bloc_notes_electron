@@ -147,22 +147,22 @@ ipcMain.on('set-modified', (event, value) => {
 });
 
 ipcMain.on('set-title', (event, fileName) => {
-  if (fileName) {
-    mainWindow.setTitle(`Bloc-Notes — ${fileName}`);
-  } else {
-    mainWindow.setTitle('Bloc-Notes');
-  }
+    if (fileName) {
+        mainWindow.setTitle(`Bloc-Notes — ${fileName}`);
+    } else {
+        mainWindow.setTitle('Bloc-Notes');
+    }
 });
 
 ipcMain.handle('show-confirm', async (event, message) => {
-  const { response } = await dialog.showMessageBox(mainWindow, {
-    type: 'question',
-    buttons: ['Continuer', 'Annuler'],
-    defaultId: 0,
-    title: 'Confirmation',
-    message: message,
-  });
-  return response === 0;
+    const { response } = await dialog.showMessageBox(mainWindow, {
+        type: 'question',
+        buttons: ['Continuer', 'Annuler'],
+        defaultId: 0,
+        title: 'Confirmation',
+        message: message,
+    });
+    return response === 0;
 });
 
 ipcMain.handle('get-theme', () => {

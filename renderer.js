@@ -73,7 +73,7 @@ async function saveFile() {
   } else {
     fileName = await window.api.saveFileAs(editor.value);
   }
-  
+
   if (fileName) {
     currentFile = true; // On n'a pas le chemin complet de retour mais on sait qu'il est set dans le main
     statusFile.textContent = fileName;
