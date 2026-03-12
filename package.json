@@ -1,0 +1,27 @@
+{
+  "name": "tp_bloc_notes_electron",
+  "version": "1.0.0",
+  "description": "Bloc-notes Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuJu16/tp_bloc_notes_electron.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/YuJu16/tp_bloc_notes_electron/issues"
+  },
+  "homepage": "https://github.com/YuJu16/tp_bloc_notes_electron#readme",
+  "devDependencies": {
+    "electron": "^29.0.0"
+  },
+  "dependencies": {
+    "electron-store": "^8.2.0"
+  }
+}
